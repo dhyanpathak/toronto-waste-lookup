@@ -1,0 +1,118 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(to right, #234C74, #20A35D);
+    padding: 10px;
+    color: white;
+}
+
+#search {
+    text-align: center;
+    padding: 20px;
+    min-width: 100%;
+    display: inline-block;
+}
+#search input {
+    display: inline-block;
+    margin-right: 10px;
+    width: 80%;
+    height: 45px;
+}
+#search button {
+    /* Flipped Glyphicon to look like the design */
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    font-size: 20px;
+    display: inline-block;
+    width: 8%;
+    height: 45px;
+}
+/* Adjust search bar to be responsive */
+@media only screen and (min-width: 600px) {
+    #search input {
+        width: 80%;
+    }
+    #search button {
+        width: 45px;
+    }
+}
+/* Row styles consisting of item name and description */
+.item {
+    margin-left: 10px;
+    padding: 20px;
+    width: 99%;
+    display: inline-block;
+}
+
+.item-title span {
+    margin-right: 5px;
+}
+
+.list {
+    height: 60vh;
+    overflow-y: scroll;
+}
+
+ /* Favourites grow in size */
+
+.favourites {
+    overflow: auto;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #F7FEFA;
+    padding: 5px 5px 25px 5px; 
+}
+
+.favourites .item-title {
+    margin-left: 4vw;
+    width: 45%;
+}
+
+
+@media only screen and (max-width: 995px) {
+    .item {
+        margin-left: 10px;
+        padding: 10px;
+        width: 100%;
+    }
+    
+    .item-title {
+        width: 30%;
+        display: inline-block;
+    }
+    .item-detail {
+        width: 70%;
+        display: inline-block;
+    }
+
+    .favourites .item-title {
+        margin-left: 1vw;
+        display: inline-block;
+        width: 30%;
+    }
+
+    .favourites .item-detail {
+        display: inline-block;
+        width: 60%
+    }
+
+}
+
